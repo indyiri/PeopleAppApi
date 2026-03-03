@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PeopleApp.API.UI.Contracts.Departments;
 using PeopleApp.Application.Interfaces;
 using PeopleApp.Application.Services;
 
@@ -15,14 +16,15 @@ namespace PeopleApp.API.UI.Controllers
         }
         #region Get
         [HttpGet]
-        public IActionResult Get()
+        public ActionResult<IEnumerable<DepartmentApiViewModel>> Get()
         {
             try
             {
                 var result = _service.GetDepartments();
                 if (result.Succeeded)
                 {
-                    return Ok(result.Departments);
+                    var response = new GetDepartmentsResponse(result.Departments!);
+                    return Ok(response.Departments);
                 }
                 return BadRequest(result.Error);
             }
@@ -39,7 +41,8 @@ namespace PeopleApp.API.UI.Controllers
                 var result = _service.GetDepartment(id);
                 if (result.Succeeded)
                 {
-                    return Ok(result.Department);
+                    var response = new GetDepartmentResponse(result.Department!);
+                    return Ok(response);
                 }
                 return BadRequest(result.Error);
             }
@@ -51,14 +54,15 @@ namespace PeopleApp.API.UI.Controllers
         #endregion
         #region Add - Post
         [HttpPost]
-        public IActionResult Add(string name)
+        public IActionResult Add(CreateDepartmentRequest request)
         {
             try
             {
-                var result = _service.Add(name);
+                var result = _service.Add(request.Name);
                 if (result.Succeeded)
                 {
-                    return Ok(result.Department);
+                    var created = new CreateDepartmentResponse(result.Department!);
+                    return Ok(created);
                 }
                 return BadRequest(result.Error);
             }
