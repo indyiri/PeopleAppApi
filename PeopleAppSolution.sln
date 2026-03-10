@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleApp.API.UI", "PeopleA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PeopleAppAPI", "PeopleAppAPI", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalPeopleApp", "ExternalPeopleApp", "{EB0F00A1-C2F6-4BFE-86C2-D7A596157287}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalPeopleApp.Mvc.UI", "ExternalPeopleApp.Mvc.UI\ExternalPeopleApp.Mvc.UI.csproj", "{51B064C4-3D51-4A3A-BF45-4B5720140E6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{35A157B5-1A55-43B9-A7D9-4E70A3A0702C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35A157B5-1A55-43B9-A7D9-4E70A3A0702C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35A157B5-1A55-43B9-A7D9-4E70A3A0702C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51B064C4-3D51-4A3A-BF45-4B5720140E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B064C4-3D51-4A3A-BF45-4B5720140E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B064C4-3D51-4A3A-BF45-4B5720140E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B064C4-3D51-4A3A-BF45-4B5720140E6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +52,7 @@ Global
 		{DA7209A4-5DB5-4FF4-B570-56975D5691F3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{08347077-0662-47A2-B2F3-B0FAD919CAA5} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{35A157B5-1A55-43B9-A7D9-4E70A3A0702C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{51B064C4-3D51-4A3A-BF45-4B5720140E6C} = {EB0F00A1-C2F6-4BFE-86C2-D7A596157287}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C91553F6-B2D9-4B6A-A833-2EA4CB700898}

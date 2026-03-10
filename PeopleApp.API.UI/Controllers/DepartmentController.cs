@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PeopleApp.API.UI.Attributes;
 using PeopleApp.API.UI.Contracts.Departments;
 using PeopleApp.Application.Interfaces;
 using PeopleApp.Application.Services;
 
 namespace PeopleApp.API.UI.Controllers
 {
+    [ApiKey]
     [Route("api/[controller]")]
     [ApiController]
     public class DepartmentController : ControllerBase
